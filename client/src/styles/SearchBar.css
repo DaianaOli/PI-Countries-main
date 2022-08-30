@@ -1,0 +1,31 @@
+.srctBtn{
+    background-color: rgba(255, 255, 255, 0.521);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 5px;
+    color: black;
+    
+}
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 20px;
+}
+.srctBtn:active{
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.inputText{
+    border-radius: 50px;
+    margin: 5px;
+    padding: 4%;
+    outline: none;
+    background-color: #eee;
+    border: 0;
+    margin-left: 15px;
+    
+}

@@ -1,0 +1,137 @@
+.navBarContainer {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 0.3em;
+    padding: 0.2em;
+    color: white;
+    justify-content: space-around;
+    align-self: flex-start;
+    background-color: rgba(93, 193, 218, 0.719);
+  }
+  .link{
+    text-decoration: none;
+
+  }
+  
+  select {
+    margin-left: 0.5rem;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    border-radius: 5%;
+    outline: none;
+    background-color: transparent;
+    color: white;
+  }
+  option {
+    color: black;
+    background-color: rgba(93, 193, 218, 0.719);
+    
+  }
+  
+  button {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  button:focus,
+  button:hover {
+    color: rgb(19, 18, 18);
+  }
+  
+  button:focus:after,
+  button:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  button:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+
+  .sortContainer {
+    display: flex;
+  }
+  .sortContainer p {
+    color: #fff;
+    font-weight: 750;
+  }
+  .filtersContainer {
+    display: flex;
+    margin-left: 3em;
+  }
+  .filtersContainer {
+    color: #fff;
+    font-weight: 750;
+  }
+  .selectContainer {
+    display: flex;
+    margin-left: 1.5em;
+  }
+  
+  .inputActivityContainer {
+    display: flex;
+    align-self: center;
+    margin-left: 3em;
+  }
+  .inputActivityContainer input {
+    margin-left: 0.5em;
+    outline: none;
+    border: 0;
+    border-radius: 25px;
+    padding: 3%;
+  }
+  .button1 {
+    background-color: rgba(255, 255, 255, 0.521);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 5px;
+    color: black;
+  }
+  
+  .button1:active {
+    color: #666;
+    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+  }
+  
+  .link2 {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-image: url("C:\Users\luzda\OneDrive\Escritorio\PI-Countries-main\client\src\components\img\countries.png");
+    background-size: 100%;
+    padding-left: 0.5%;
+    padding-right: 0.5%;
+    border-radius: 5%;
+    align-items: baseline;
+}
+.link2:hover {
+    background-color: #fff;
+    color: rgba(255, 255, 255, 0);
+    transition: 0.7s;
+}
+.textact{
+    color: #fff;
+    font-weight: 750;
+}

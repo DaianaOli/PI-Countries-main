@@ -1,0 +1,28 @@
+.links{
+    text-decoration: none;
+}
+
+.countrysContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    margin: 2em;
+    border: 1px solid rgba(93, 193, 218, 0.719);
+}
+
+
+.countrysContainer h2{
+    font-size: 25px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+}
+.imgContainers img{
+    width: 90%; 
+    border: 1px solid rgba(249, 251, 252, 0.719);
+
+
+}

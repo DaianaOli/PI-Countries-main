@@ -1,0 +1,23 @@
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.button{
+display: inline-block;
+padding:0.35em 1.2em ;
+border:0.2em solid #838383;
+margin:1em 0.3em 0.3em 0;
+text-decoration:none;
+font-family:'Roboto',sans-serif;
+font-weight:300;
+text-align:center;
+transition: all 0.2s;
+font-size: larger;
+color: rgb(241, 238, 238);
+}
+
+.button:hover{
+    color: #181717;
+    background-color: #f8eeee;
+}
