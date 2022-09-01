@@ -83,7 +83,7 @@ const ActivityForm = () => {
         e.preventDefault();
         var form = true;
 
-        if (dataForm["name"].length < 2) {
+        if (dataForm["name"].length < 2 | dataForm["difficulty"] === "" | dataForm["duration"] === "" | dataForm["season"] === "") {
         form = false;
         } else if (!dataForm["countryID"].length >= 1) {
         form = false;
