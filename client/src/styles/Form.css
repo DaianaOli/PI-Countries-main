@@ -96,7 +96,12 @@
   color: #000000;
   background-color: #8a8a8a;
 }
-
+.correct{
+  color: chartreuse;
+}
+.incorrect{
+  color: red;
+}
 .btn:hover {
   color: #000000;
   background-color: #cdd4cd;

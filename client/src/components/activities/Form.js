@@ -97,7 +97,7 @@ const ActivityForm = () => {
         return alert("Please fill all the fields before creating a new activity");
         }
     };
-
+ console.log(dataForm.name)
     return (
         <div>
         <div className='navBarContainer'>
@@ -115,6 +115,7 @@ const ActivityForm = () => {
                 value={dataForm.name}
                 onChange={setDataHandler}
                 />
+                <span>{dataForm.name.length === 0 ? <></> : dataForm.name.length > 0 && dataForm.name.length <= 2 ? <p className="incorrect">Name must contain 3 characters </p>: <p className="correct">Correct</p>}</span>
             </div>
 
             <div className='difficulty'>
