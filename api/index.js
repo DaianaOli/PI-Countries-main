@@ -25,7 +25,7 @@ const dot = require('dotenv');
 dot.config();
 axios.default.baseURL = 'http://localhost:3001';
 var local='';
-if (process.env.PORT == 3000){
+if (process.env.PORT == 3001){
   local='http://localhost:3001';
 }else {
   local= "https://contries-pi-henry.herokuapp.com";
