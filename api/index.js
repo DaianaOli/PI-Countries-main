@@ -20,11 +20,21 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const {LoadDb} = require('./src/loadDb')
+const axios = require('axios');
+const dot = require('dotenv');
+dot.config();
+axios.default.baseURL = 'http://localhost:3001';
+var local='';
+if (process.env.PORT == 3001){
+  local='http://localhost:3001';
+}else {
+  local= "https://pi-henry-countries.herokuapp.com";
+}
 
 // Syncing all the models at once.
 conn.sync({ force: true }).then(() => {
-  server.listen(3001, () => {
-    LoadDb();
-    console.log('% listening at 3001');
+server.listen(process.env.PORT, () => {
+  LoadDb();
+    console.log('\x1b[33m%s\x1b[0m', 'server listening at 3001'); // eslint-disable-line no-console
   });
 });

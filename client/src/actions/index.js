@@ -9,6 +9,7 @@ import {
     ORD_POP_REV,
     ORD_CONTINENT,
     SHOW_ACTIV,
+    FILTER_BY_DB
 } from "./const";
 
 
@@ -81,19 +82,22 @@ export const showActiv = (payload) => {
 };
 
 export function createCountry(activity) {
-    console.log("ACTIVITY: ", activity);
     return async function () {
     try {
-        console.log("body de form" + activity);
         const newAct = await axios.post(
         "http://localhost:3001/activities",
         activity
         );
-        console.log(newAct);
     } catch (error) {
-        console.log(error);
+        return(error);
     }
     };
+}
+export function filterByDB(payload){
+    return {
+        type: "FILTER_BY_DB",
+        payload
+    }
 }
 
 

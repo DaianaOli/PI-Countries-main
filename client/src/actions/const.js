@@ -9,3 +9,4 @@ export const ORD_CONTINENT = "ORD_CONTINENT";
 export const SHOW_ACTIV = "SHOW_ACTIV";
 // export const DELETE_ACTIVITY = "DELETE_ACTIVITY";
 // export const POST_ACTIVITY = "POST_ACTIVITY";
+export const FILTER_BY_DB = "FILTER_BY_DB";

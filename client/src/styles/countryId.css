@@ -41,7 +41,10 @@
                 
             }
     
-    .activity{
-    
-        margin-left: 20px;
-    }
+.info-details{
+    display: flex;
+    background-color: rgba(46, 47, 48, 0.61);
+    flex-direction: row;
+    justify-content: space-around;
+
+}
