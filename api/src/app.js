@@ -7,10 +7,18 @@ const cors = require("cors")
 
 require('./db.js');
 
+const corsOptions= {
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Origin','X-Requested-With', 'Content-Type', 'Accept'],
+  credentials: true,
+  optionsSuccessStatus: 200
+}
+
 const server = express();
 
 server.name = 'API';
-server.use(cors())
+server.use(cors(corsOptions))
 server.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 server.use(bodyParser.json({ limit: '50mb' }));
 server.use(cookieParser());

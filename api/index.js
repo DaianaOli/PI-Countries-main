@@ -20,11 +20,11 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const {LoadDb} = require('./src/loadDb')
-const PORT = process.env.PORT;
+const PGPORT = process.env.PGPORT;
 
-conn.sync({ force: false }).then(() => {
-  server.listen(PORT, () => {
+conn.sync({ force: true }).then(() => {
+  server.listen(PGPORT, () => {
     LoadDb();
-    console.log(`Server listening at ${PORT}`);
+    console.log(`Server listening at ${PGPORT}`);
   });
 });
