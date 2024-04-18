@@ -4,21 +4,17 @@ const fs = require('fs');
 const path = require('path');
 
 const {
-  POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_HOST, PG_PORT, POSTGRES_DB, POSTGRES_URL
+  PGUSER, PGPASSWORD, PGHOST, PGPORT, PGDATABASE
 } = process.env;
 
 let sequelize =
   process.env.NODE_ENV === "production"
-    ?  new Sequelize(
-      `${POSTGRES_URL}`,
-      { logging: false, native: false }
-    )
-    : new Sequelize({
-      database: POSTGRES_DB,
-      username: POSTGRES_USER,
-      password: POSTGRES_PASSWORD,
-      host: POSTGRES_HOST,
-      port: PG_PORT,
+    ? new Sequelize({
+      database: PGDATABASE,
+      username: PGUSER,
+      password: PGPASSWORD,
+      host: PGHOST,
+      port: PGPORT,
       dialect: "postgres",
         pool: {
           max: 3,
@@ -35,6 +31,10 @@ let sequelize =
         },
         ssl: true,
       })
+    : new Sequelize(
+      `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/food`,
+        { logging: false, native: false }
+      );
 
 const basename = path.basename(__filename);
 
