@@ -4,7 +4,7 @@ const fs = require('fs');
 const path = require('path');
 
 const {
-  POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_HOST, POSTGRES_PORT, POSTGRES_DATABASE, POSTGRES_URL
+  POSTGRES_USER, POSTGRES_PASSWORD, POSTGRES_HOST, PG_PORT, POSTGRES_DB, POSTGRES_URL
 } = process.env;
 
 let sequelize =
@@ -14,11 +14,11 @@ let sequelize =
       { logging: false, native: false }
     )
     : new Sequelize({
-      database: POSTGRES_DATABASE,
+      database: POSTGRES_DB,
       username: POSTGRES_USER,
       password: POSTGRES_PASSWORD,
       host: POSTGRES_HOST,
-      port: POSTGRES_PORT,
+      port: PG_PORT,
       dialect: "postgres",
         pool: {
           max: 3,
