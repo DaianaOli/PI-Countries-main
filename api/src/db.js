@@ -32,7 +32,7 @@ let sequelize =
         ssl: true,
       })
     : new Sequelize(
-      `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/food`,
+      `postgres://${PGUSER}:${PGPASSWORD}@${PGHOST}/countries`,
         { logging: false, native: false }
       );
 
